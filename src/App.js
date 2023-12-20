@@ -1,8 +1,18 @@
+import { Outlet } from 'react-router-dom';
+import { Provider } from 'react-redux';
+
+import appStore from './utils/store/appStore';
+
+import Header from './components/Header';
+import Footer from './components/Footer';
+
 const App = () => {
   return (
-    <>
-      <h1 className='text-2xl'> Let's Building Netflix GPT </h1>
-    </>
+    <Provider store={appStore}>
+      <Header />
+      <Outlet />
+      <Footer />
+    </Provider>
   );
 };
 
