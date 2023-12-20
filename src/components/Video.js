@@ -9,7 +9,7 @@ const Video = ({ title, overview, movieId }) => {
 
   return (
     <>
-      <div className='px-24 py-[25%] w-screen aspect-video absolute bg-gradient-to-r from-black'>
+      <div className='pl-8 pt-[25%] w-screen aspect-video absolute bg-gradient-to-r from-black'>
         <h1 className='text-3xl text-white'> {title} </h1>
         <p className='mt-2 text-sm text-white w-2/4'> {overview} </p>
         <button className='mt-4 px-6 py-2 bg-white text-black rounded-sm hover:bg-opacity-80'>
@@ -19,18 +19,16 @@ const Video = ({ title, overview, movieId }) => {
           More Info
         </button>
       </div>
-      <div className='w-screen'>
-        <iframe
-          className='w-screen aspect-video'
-          src={
-            'https://www.youtube.com/embed/' +
-            trailerKey +
-            '?si=iTwprPhF7pLyWbEw&amp;controls=0&autoplay=1&mute=1&loop=1'
-          }
-          title='YouTube video player'
-          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-        ></iframe>
-      </div>
+      <iframe
+        className='w-screen aspect-video'
+        src={
+          'https://www.youtube.com/embed/' +
+          trailerKey +
+          '?si=iTwprPhF7pLyWbEw&amp;controls=0&autoplay=1&mute=1&loop=1'
+        }
+        title='YouTube video player'
+        allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+      ></iframe>
     </>
   );
 };
