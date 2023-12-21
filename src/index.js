@@ -9,16 +9,13 @@ import Body from './components/Body';
 import SignUp from './components/SignUp';
 import Login from './components/Login';
 import Browse from './components/Browse';
+import MovieSuggestion from './components/MovieSuggestion';
 
 const appRouter = createBrowserRouter([
   {
     path: '/',
     element: <App />,
     children: [
-      {
-        path: '/',
-        element: <Body />,
-      },
       {
         path: '/login',
         element: <Login />,
@@ -30,6 +27,10 @@ const appRouter = createBrowserRouter([
       {
         path: '/browse',
         element: <Browse />,
+      },
+      {
+        path: '/suggest',
+        element: <MovieSuggestion />,
       },
     ],
   },

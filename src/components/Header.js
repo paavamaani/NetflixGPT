@@ -19,9 +19,7 @@ const Header = () => {
   const onClickSignOut = () => {
     signOut(auth)
       .then(() => {})
-      .catch((error) => {
-        console.log(error);
-      });
+      .catch((error) => {});
   };
 
   useEffect(() => {
@@ -44,22 +42,22 @@ const Header = () => {
     <nav className='px-12 py-2 absolute w-screen z-10 flex items-center justify-between bg-black text-slate-50 bg-transparent'>
       <img className='px-8 py-2 w-56' src={logo} alt='Netflix' />
       <ul className='mr-2 flex justify-between'>
-        <li className='mr-2 px-4 py-2 hover:bg-slate-50 hover:text-black'>
-          <Link to='/'> Home </Link>
-        </li>
-        {!user && (
-          <li className='mr-2 px-4 py-2 hover:bg-slate-50 hover:text-black'>
-            <Link to='/login'> Log In </Link>
-          </li>
-        )}
         {user && (
-          <button
-            className='bg-red-600 p-2 rounded-lg hover:bg-red-500'
-            onClick={onClickSignOut}
-            type='button'
-          >
-            Sign Out
-          </button>
+          <>
+            <li className='mr-2 px-4 py-2 hover:bg-slate-50 hover:text-black'>
+              <Link to='/browse'> Home </Link>
+            </li>
+            <li className='mr-2 px-4 py-2 hover:bg-slate-50 hover:text-black'>
+              <Link to='/suggest'> Movie Suggestions </Link>
+            </li>
+            <button
+              className='bg-red-600 px-2 rounded-lg hover:bg-red-500'
+              onClick={onClickSignOut}
+              type='button'
+            >
+              Sign Out
+            </button>
+          </>
         )}
       </ul>
     </nav>
