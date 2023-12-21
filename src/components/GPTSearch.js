@@ -35,20 +35,19 @@ const GPTSearch = () => {
   };
 
   return (
-    <div className='absolute m-auto p-12 top-32 left-0 right-0 w-2/3 bg-black rounded-lg bg-opacity-80 text-center'>
+    <div className='absolute m-auto p-12 top-32 left-0 right-0 lg:w-2/3 bg-black rounded-lg bg-opacity-80 text-center'>
       <form onSubmit={fetchResults}>
         <h1 className='mb-4 text-3xl text-white'>
-          {' '}
-          What you would like to watch today{' '}
+          What you would like to watch today
         </h1>
         <input
-          className='w-2/4 mr-2 p-2 border-slate-300 rounded-lg'
+          className='w-full lg:w-2/4 mr-2 p-2 border-slate-300 rounded-lg'
           type='text'
           placeholder='I can suggest you some better movies'
           ref={search}
         />
         <button
-          className='bg-red-600 p-2 rounded-lg hover:bg-red-500 text-white'
+          className='mt-2 lg:mt-0 bg-red-600 p-2 rounded-lg hover:bg-red-500 text-white'
           type='submit'
         >
           Get Suggestions

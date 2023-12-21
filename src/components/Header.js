@@ -39,8 +39,12 @@ const Header = () => {
   }, []);
 
   return (
-    <nav className='px-12 py-2 absolute w-screen z-10 flex items-center justify-between bg-black text-slate-50 bg-transparent'>
-      <img className='px-8 py-2 w-56' src={logo} alt='Netflix' />
+    <nav className='lg:px-12 py-2 absolute w-screen z-10 flex items-center justify-between bg-black text-slate-50 bg-transparent'>
+      <img
+        className='lg:px-8 lg:py-2 lg:w-56 px-4 w-40'
+        src={logo}
+        alt='Netflix'
+      />
       <ul className='mr-2 flex justify-between'>
         {user && (
           <>

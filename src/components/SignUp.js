@@ -74,7 +74,7 @@ const SignUp = () => {
         src={backgroundImage}
         alt='Sign Up Page'
       />
-      <div className='absolute m-auto p-12 top-28 left-0 right-0 w-2/6 bg-black  text-white rounded-lg bg-opacity-80'>
+      <div className='absolute m-auto p-12 top-28 left-0 right-0 lg:w-2/6 bg-black  text-white rounded-lg bg-opacity-80'>
         <h1 className='text-2xl'> Sign Up </h1>
         <form className='my-4' onSubmit={(ev) => onSubmitForm(ev)}>
           <Input
